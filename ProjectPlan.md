@@ -1,13 +1,51 @@
-Overview: Describe the overall goal of your project and your planned approach to achieve it. Explain what you aim to accomplish and outline the main steps or methods you will use to execute the project (max 250 words).
-Team: Clearly define team member roles and responsibilities.
-Research or Business Question(s): What is/are the question(s) you intend to address? These could be research questions, business questions, or analytical questions you want to answer through data analysis.
-Datasets: Identify and describe the datasets you will use to answer your question(s). You need to use at least two different datasets that complement each other and can be integrated together. The datasets should each contribute different but related information needed to address your questions, and they must share common attributes or identifiers that allow you to link them. For example, if one dataset contains demographic information and another contains economic indicators, they should both include geographic codes or time periods that enable meaningful integration.If you need help finding suitable datasets, start by reviewing the list of datasets provided in class. 
-Kaggle Clause: First, they can be analysis-ready, which does not reflect the real-world data wrangling challenges this project is designed to teach. Second, and more importantly, Kaggle datasets often have dubious provenance and unclear licensing: it is frequently difficult to trace where the data originally came from, how it was collected, and under what terms it can be reused. This raises concerns about data quality, ethical use, and reproducibility, all of which are central to this course. Projects using Kaggle datasets will therefore receive a 5% reduction in the final grade unless accompanied by a strong justification. Justifications will be evaluated on a case-by-case basis and must address three points: 
-(i) why this particular dataset was selected
-(ii) what alternative datasets exist in the domain of interest, including a list of sources considered and the reasons they were not suitable, and 
-(iii) why the project objectives were not adjusted to accommodate the limitations of available non-Kaggle data. 
-Timeline: Provide a draft of the plan and timeline for completing your project. Include a list of specific tasks you need to accomplish, a brief description of each task, when each task will be completed, and who will be responsible for completing it..
-Your plan must clearly address each of the requirements described above
-Constraints: Describe any known limitations or challenges with your datasets or approach. These might include legal or ethical restrictions, unknown data provenance, technical difficulties in processing the data, issues with data completeness, limited temporal or spatial coverage, accessibility barriers, or other relevant concerns that could affect your work..
-Gaps: Identify any known gaps or areas where you need additional input.
-Your plan should anticipate later course topics even if you don’t yet know all the details. It is expected that your plan will evolve over time.
+# Chicago Traffic Crash Severity Analysis
+
+---
+
+## Overview
+
+This project analyzes what factors contribute most to severe traffic crashes in Chicago. We plan to build a multiple regression model to identify which variables (weather conditions, lighting, road defects, driver demographics) most strongly correlate with severe injuries or fatalities.
+
+Our approach:
+1. Acquire data from the City of Chicago's Open Data API (Socrata)
+2. Clean and integrate the datasets by joining on unique crash identifiers
+3. Assess data quality and handle missing or inconsistent values
+4. Run a multiple regression model to measure the effect of each variable on crash outcomes
+5. Visualize results to highlight patterns relevant to urban safety
+
+---
+
+## Team
+
+| Member | Role | Responsibilities |
+|---|---|---|
+| **Luke Manthuruthil** | Data Acquisition and Workflow Lead | Data acquisition, API integration, Snakemake pipeline, "Crashes" dataset processing, GitHub repository management |
+| **Ganga** | Data Cleaning and Modeling Lead | Data cleaning, quality assessment, statistical modeling, "People" dataset processing, integration logic, regression visualizations |
+| **Both Members** | Shared | Markdown documentation, ethical data review, final report writing |
+
+---
+
+## Research Question(s)
+
+> **What combination of environmental factors (lighting, weather) and human factors (age, safety equipment use) is the strongest predictor of "Incapacitating Injury" or "Fatal" outcomes in Chicago traffic accidents?**
+
+---
+
+## Datasets
+
+### 1. Traffic Crashes - Crashes
+- **Source:** [City of Chicago Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if)
+- **Format:** CSV / JSON via Socrata API
+- **Description:** One record per crash incident. Includes date, location, posted speed limit, weather conditions, lighting conditions, and road surface conditions.
+- **Key Variables:** `CRASH_DATE`, `WEATHER_CONDITION`, `LIGHTING_CONDITION`, `ROADWAY_SURFACE_COND`, `POSTED_SPEED_LIMIT`, `TRAFFIC_CONTROL_DEVICE`, `FIRST_CRASH_TYPE`, latitude/longitude
+- **Integration Key:** `CRASH_RECORD_ID`
+
+### 2. Traffic Crashes - People
+- **Source:** [City of Chicago Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-People/u6pd-qa9d)
+- **Format:** CSV / JSON via Socrata API
+- **Description:** One record per person involved in a crash. Includes demographics (age, sex), role (driver, passenger, pedestrian), safety equipment usage, and injury severity.
+- **Key Variables:** `PERSON_TYPE`, `SEX`, `AGE`, `SAFETY_EQUIPMENT`, `INJURY_CLASSIFICATION`
+- **Integration Key:** `CRASH_RECORD_ID`
+
+### Dataset Integration
+Both datasets share the `CRASH_RECORD_ID` field, which allows us to join crash-level environmental data with person-level demographic and injury data. Neither dataset on its own is sufficient to answer the research question, so the join is central to the analysis.
