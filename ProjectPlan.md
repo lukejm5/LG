@@ -35,14 +35,14 @@ Our approach:
 
 ### 1. Traffic Crashes - Crashes
 - **Source:** [City of Chicago Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if)
-- **Format:** CSV / JSON via Socrata API
+- **Format:** CSV via Socrata API
 - **Description:** One record per crash incident. Includes date, location, posted speed limit, weather conditions, lighting conditions, and road surface conditions.
 - **Key Variables:** `CRASH_DATE`, `WEATHER_CONDITION`, `LIGHTING_CONDITION`, `ROADWAY_SURFACE_COND`, `POSTED_SPEED_LIMIT`, `TRAFFIC_CONTROL_DEVICE`, `FIRST_CRASH_TYPE`, latitude/longitude
 - **Integration Key:** `CRASH_RECORD_ID`
 
 ### 2. Traffic Crashes - People
 - **Source:** [City of Chicago Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-People/u6pd-qa9d)
-- **Format:** CSV / JSON via Socrata API
+- **Format:** CSV via Socrata API
 - **Description:** One record per person involved in a crash. Includes demographics (age, sex), role (driver, passenger, pedestrian), safety equipment usage, and injury severity.
 - **Key Variables:** `PERSON_TYPE`, `SEX`, `AGE`, `SAFETY_EQUIPMENT`, `INJURY_CLASSIFICATION`
 - **Integration Key:** `CRASH_RECORD_ID`
