@@ -1,4 +1,4 @@
-# Chicago Traffic Safety Analysis — Project Proposal
+# Chicago Traffic Safety Analysis - Project Proposal
  
 ## 1. Overview
  
