@@ -40,12 +40,12 @@ Our project is driven by two main questions that seek to balance environmental c
  
 We will integrate two distinct datasets from the City of Chicago Open Data Portal. Both datasets are authoritative, regularly updated, and provide a high level of granularity.
  
-### Dataset 1: Traffic Crashes — Crashes
+### Dataset 1: Traffic Crashes - Crashes
 - **Source:** City of Chicago Data Portal
 - **Description:** This dataset serves as our "event" table. It contains one record for every traffic crash that occurred within the city limits. It includes metadata about the crash itself, such as the date and time, the posted speed limit, the presence of traffic control devices, and environmental data like weather and lighting.
 - **Access Method:** We will use the Socrata Open Data API (SODA) to pull this data in JSON format using the Python `requests` library.
  
-### Dataset 2: Traffic Crashes — People
+### Dataset 2: Traffic Crashes - People
 - **Source:** City of Chicago Data Portal
 - **Description:** This dataset serves as our "individual" table. Since multiple people can be involved in a single crash, this table has multiple rows for every one row in the Crashes table. It includes critical demographic data, the role of the person (driver, passenger, or pedestrian), safety equipment usage, and a standardized injury classification (Fatal, Incapacitating, Non-Incapacitating, etc.).
 - **Access Method:** We will acquire this data in CSV format, either via a direct download script or the API.
