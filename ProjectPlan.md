@@ -12,10 +12,10 @@ Our approach follows the professional data science lifecycle, beginning with pro
  
 To ensure accountability and a clear division of labor, we have split the project into two main workstreams: Data Engineering and Data Science.
  
-### Luke Manthuruthil — Lead Data Engineer
+### Luke Manthuruthil - Lead Data Engineer
 My primary responsibility is the technical foundation of the project. I will write the Python scripts required for automated data acquisition via API requests. I am also in charge of the repository architecture and the implementation of the Snakemake workflow. This involves managing the file organization, ensuring that all dependencies are listed in a requirements file, and creating the "Run All" functionality that allows the instructors to replicate our entire pipeline with a single command. I will also oversee the data integration phase, ensuring the relational join between the two datasets is handled without losing critical information.
  
-### Ganga — Lead Data Scientist
+### Ganga - Lead Data Scientist
 Ganga is responsible for the analytical integrity of the project. This role focuses on the data cleaning, profiling, and modeling phases. Ganga will perform a detailed data quality assessment to identify outliers, missing values, and potential biases in the raw datasets. Once the data is prepared, Ganga will lead the statistical modeling efforts, specifically the development and testing of our multiple regression models. This includes interpreting the coefficients to determine which factors are statistically significant. Finally, Ganga will create the visualizations and charts that translate our numerical results into clear, actionable insights for our final report.
  
 ---
