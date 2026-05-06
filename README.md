@@ -210,7 +210,7 @@ snakemake fetch_people --cores 1
 
 **Option B: download the snapshot we used from Box.** If you want the exact dataset that produced the metrics in this report, download the two CSVs from our Box folder and place them in `data/raw/`.
 
-Box link: *(to be added by Ganga before final submission)*
+Box link: https://uofi.box.com/s/vhj0ityuft7emx2jrcnkvcp6bfo3qjaz
 
 After download, verify the files match the snapshot we used by comparing SHA-256 checksums:
 
