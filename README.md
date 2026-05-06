@@ -35,7 +35,7 @@ We were not able to formally test the secondary research question about demograp
 - **Source:** [City of Chicago Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-Crashes/85ca-t3if)
 - **Endpoint:** `https://data.cityofchicago.org/resource/85ca-t3if.json`
 - **Access method:** Socrata Open Data API (SODA) via Python `requests`
-- **Rows:** 1,040,997
+- **Rows:** 1,045,043
 - **Columns selected:** 20
 - **Format:** JSON (response), stored locally as CSV
 - **Coverage:** September 2017 onward, updated continuously as crash reports are finalized or amended
@@ -49,7 +49,7 @@ Crashes are only reportable if they involve property damage of $1,500 or more, b
 - **Source:** [City of Chicago Data Portal](https://data.cityofchicago.org/Transportation/Traffic-Crashes-People/u6pd-qa9d)
 - **Endpoint:** `https://data.cityofchicago.org/resource/u6pd-qa9d.json`
 - **Access method:** Socrata Open Data API (SODA) via Python `requests`
-- **Rows:** 2,284,768
+- **Rows:** 2,293,745
 - **Columns selected:** 16
 - **Format:** JSON (response), stored locally as CSV
 - **Coverage:** Same as Crashes
