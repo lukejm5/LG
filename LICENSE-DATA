@@ -1,0 +1,27 @@
+Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The derived data files and figures produced by this project (including but not
+limited to data/interim/merged.csv, data/processed/clean.csv, results/figures/*,
+results/metrics.json, results/coefficients.csv, and results/eda_summary.json)
+are released by Luke Manthuruthil and Ganga Sajith under a Creative Commons
+Attribution 4.0 International License.
+
+You are free to:
+- Share: copy and redistribute the material in any medium or format
+- Adapt: remix, transform, and build upon the material for any purpose, even
+  commercially
+
+Under the following terms:
+- Attribution: You must give appropriate credit, provide a link to the license,
+  and indicate if changes were made. You may do so in any reasonable manner,
+  but not in any way that suggests the licensor endorses you or your use.
+
+The full license text is available at:
+https://creativecommons.org/licenses/by/4.0/legalcode
+
+Attribution should reference: Manthuruthil, L. and Sajith, G. (2026). Chicago
+Traffic Safety Analysis. https://github.com/lukejm5/LG
+
+Note: The raw source data (data/raw/crashes.csv and data/raw/people.csv) is
+NOT released under this license. Those files come from the City of Chicago
+Data Portal and remain subject to the City of Chicago's terms of use.

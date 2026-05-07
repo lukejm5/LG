@@ -1,0 +1,2 @@
+7a7fa3c97ae688cb49b469a6e3b52c8d148eb39e6d11f2c157d50aa12583d580  data/raw/crashes.csv
+e66ea7466c33c8587249e6f388aeb3ad39631d47841adda0bf55c1a2f58d374e  data/raw/people.csv
